@@ -1,0 +1,702 @@
+[
+  {
+    "question": "Mely állítások igazak a CRC kártyákra?",
+    "options": [
+      { "text": "Osztályok meghatározása nem diagramok alapján, hanem táblázatos lapok segítségével.", "isCorrect": true },
+      { "text": "UML-ben hibajavítás során használhatóak", "isCorrect": false },
+      { "text": "A leírásban csak metódusokat kell szerepeltetni.", "isCorrect": false },
+      { "text": "A leírásban nem metódusokat és attribútumok, hanem az osztályokhoz rendelhető felelősségek vannak.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Osztálydiagramok készítésének milyen fázisai vannak?",
+    "options": [
+      { "text": "Elemzési osztálydiagram", "isCorrect": true },
+      { "text": "Kollaborációs osztálydiagram", "isCorrect": false },
+      { "text": "Tervezési osztálydiagram", "isCorrect": true },
+      { "text": "Osztálydiagram a tervezési minták kialakításához", "isCorrect": false },
+      { "text": "Megvalósítási osztálydiagram", "isCorrect": true },
+      { "text": "Futásidejű osztálydiagram", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "UML osztálydiagramon hogyan kell értelmezni két osztály közötti vonalat?",
+    "options": [
+      { "text": "kooperáció", "isCorrect": false },
+      { "text": "asszociáció", "isCorrect": true },
+      { "text": "aggregáció", "isCorrect": true },
+      { "text": "kompozíció", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "UML osztálydiagram számosság jelölésére melyek a szintaktikailag helyes válaszok?",
+    "options": [
+      { "text": "0..1", "isCorrect": true },
+      { "text": "*0", "isCorrect": false },
+      { "text": "0..*", "isCorrect": true },
+      { "text": "5", "isCorrect": true },
+      { "text": "0..3", "isCorrect": true },
+      { "text": "Egyik sem, a számosság másképpen van jelölve.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagram esetén mire jó a fogalmi szótár?",
+    "options": [
+      { "text": "Magyarázatot ad a modellben felhasznált metódusokra, tevékenységdiagramokkal.", "isCorrect": false },
+      { "text": "Magyarázatot ad a modellben felhasznált fogalmakra, szinonímákkal, fogalmi környezettel.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állítást!",
+    "options": [
+      { "text": "Osztálydiagramon az asszociáció kapcsolatot jelöl, a kompozíció tulajdonlást.", "isCorrect": true },
+      { "text": "Osztálydiagramon a kompozíció kapcsolatot jelöl, az asszociáció tulajdonlást.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "UML osztálydiagramon mi a kompozíció jele?",
+    "options": [
+      { "text": "Fekete rombusz végű vonal, rombusz a tartalmazó oldalon", "isCorrect": true },
+      { "text": "Fekete rombusz végű vonal, rombusz a tartalmazott oldalon", "isCorrect": false },
+      { "text": "Nyílt fejű nyíl", "isCorrect": false },
+      { "text": "Telt fejű nyíl, az ős felöli olalon", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Melyik (osztálydiagram) kapcsolattípusra igaz az alábbi állítás: A tartalmazó objektum megszűntével az összes részobjektum is felszámolódik",
+    "options": [
+      { "text": "Öröklődés", "isCorrect": false },
+      { "text": "Kompozíció", "isCorrect": true },
+      { "text": "Asszociáció", "isCorrect": false },
+      { "text": "Kooperáció", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "UML osztálydiagram esetén mi az osztály rajzjele?",
+    "options": [
+      { "text": "Lekerekített sarkú téglalap", "isCorrect": false },
+      { "text": "3 részre osztott téglalap", "isCorrect": true },
+      { "text": "Ellipszis", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak osztálydiagram osztály rajzelemre?",
+    "options": [
+      { "text": "3 részre osztott téglalap, benne osztálynév, aktor és use case lista", "isCorrect": false },
+      { "text": "Egyszerű téglalap, benne use case elnevezése", "isCorrect": false },
+      { "text": "Egyszerű téglalap, benne az osztály neve", "isCorrect": true },
+      { "text": "3 részre osztott téglalap, benne osztálynév, attribútumok és műveletek", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent a dőlt betűs osztálynév?",
+    "options": [
+      { "text": "Statikus osztály, azaz nem lehetnek példányai", "isCorrect": false },
+      { "text": "Absztrakt osztály, azaz nem lehetnek példányai", "isCorrect": true },
+      { "text": "Controller típusú osztály", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent az <<abstract>> sztereotípia?",
+    "options": [
+      { "text": "Olyan osztályt jelöl, melyet nem lehet további öröklési hierarchiában felhasználni.", "isCorrect": false },
+      { "text": "Adatbázis interfészt jelöl", "isCorrect": false },
+      { "text": "Olyan osztályt jelöl, melynek nem lehetnek példányai", "isCorrect": true },
+      { "text": "Olyan osztályt jelöl, melynek szigorúan csak egy példája létezhet", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent az <<entity>> sztereotípia?",
+    "options": [
+      { "text": "A felhasználó számára fontos entitások jelölésére szolgál", "isCorrect": false },
+      { "text": "Azon osztályok jelölése, melyek attribútumait perzisztálni kell", "isCorrect": true },
+      { "text": "Az adatbázisbe írást megvalósító osztályok jelölése", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent az <<boundary>> sztereotípia?",
+    "options": [
+      { "text": "A felhasználó számára fontos entitások jelölésére szolgál", "isCorrect": false },
+      { "text": "A felhasználói felülethez tartozó osztályok jelölése ez", "isCorrect": true },
+      { "text": "Olyan osztályt jelöl, melyet nem lehet további öröklési hierarchiában felhasználni.", "isCorrect": false },
+      { "text": "Statikus osztály, azaz nem lehetnek példányai", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent az <<uses>> sztereotípia?",
+    "options": [
+      { "text": "Öröklődést", "isCorrect": false },
+      { "text": "Interfész használatot", "isCorrect": true },
+      { "text": "Aktor általi használatot", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit jelent az <<implements>> sztereotípia?",
+    "options": [
+      { "text": "Use case megvalósítást", "isCorrect": false },
+      { "text": "Interfész megvalósítást", "isCorrect": true },
+      { "text": "Absztrakt osztály megvalósítást", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mit értünk interfész alatt?",
+    "options": [
+      { "text": "Olyan szerződést, mely metódus szignatúrákat definiál", "isCorrect": true },
+      { "text": "Absztrakt osztályt", "isCorrect": false },
+      { "text": "Olyan csatlakozási pontot, mely segítségével külső rendszerekből kérhetünk le adatokat", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon hogyan jelöljük az interfészt?",
+    "options": [
+      { "text": "Szaggatott ellipszissel", "isCorrect": false },
+      { "text": "<<implements>> sztereotípiával", "isCorrect": false },
+      { "text": "<<interface>> sztereotípiával", "isCorrect": true },
+      { "text": "Körrel illetve gömbcsuklóval", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Osztálydiagramon mi a különbség egy interfész és egy absztrakt osztály között?",
+    "options": [
+      { "text": "Nincs különbség, de interfészekkel szebb megvalósítás érhető el", "isCorrect": false },
+      { "text": "Egy interfészből tetszőleges számú példány létrehozható, de absztrakt osztályból csak egy.", "isCorrect": false },
+      { "text": "Egy interfészből tetszőleges számú példány létrehozható, de absztrakt osztályból egy sem.", "isCorrect": false },
+      { "text": "Interfész csak szignatúrát definiál, az absztrakt osztály megvalósítást is, mely felül nem bírálható", "isCorrect": false },
+      { "text": "Interfész csak szignatúrát definiál, az absztrakt osztály megvalósítást is, mely felülbírálható", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Osztály diagramon mely állítások igazak az aktív osztályokra?",
+    "options": [
+      { "text": "Önmaguktól aktiválódnak, nem kell hozzá külső esemény", "isCorrect": true },
+      { "text": "Felhasználói akcióra aktiválódnak, ez a külső esemény", "isCorrect": false },
+      { "text": "<<activeclass>> sztereotípiával hangsúlyozható", "isCorrect": true },
+      { "text": "<<controller>> sztereotípia kötelező ilyenkor", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Osztálydiagramok esetén mi igaz a taxonómiára?",
+    "options": [
+      { "text": "Csak asszociáció tüntethető fel", "isCorrect": false },
+      { "text": "Csak kompozíció tüntethető felt", "isCorrect": false },
+      { "text": "Csak öröklődési hierarchia tüntethető fel", "isCorrect": true },
+      { "text": "Csak olyan osztályok szerepelhetnek rajta, melyek példányosíthatóak", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mit jelent: powertype?",
+    "options": [
+      { "text": "Olyan típusok, melyekben a vezérlés lényegi része található", "isCorrect": false },
+      { "text": "Olyan osztályok, melyek példányai egyszerre alosztályok is", "isCorrect": true },
+      { "text": "Olyan osztályok, melyek az öröklési hierarchia tetején találhatóak", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "UML osztálydiagram esetén melyek a kompozíció hierarchia jellemzői?",
+    "options": [
+      { "text": "Csak osztályok tüntethetőek fel, kapcsolatokkal", "isCorrect": true },
+      { "text": "Csak statikus osztályok tüntethetőek fel", "isCorrect": false },
+      { "text": "Csak osztályok és use casek tüntethetőek fel", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "UML osztálydiagram igaz állítások (statikus osztály):",
+    "options": [
+      { "text": "Statikus osztály nem példányosítható", "isCorrect": true },
+      { "text": "Statikus osztály csak tervezési minta szerint példányosítható", "isCorrect": false },
+      { "text": "Statikus osztály csak egy példánnyal rendelkezhet", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak az UML <<snapshot>> sztereotípiára?",
+    "options": [
+      { "text": "... kizárólag osztálydiagramon használható", "isCorrect": false },
+      { "text": "osztály kötelező példányosítását jelöli", "isCorrect": false },
+      { "text": "osztály opcionális példányosítását jelöli", "isCorrect": false },
+      { "text": "... osztály objektumára példát mutat", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak (ER diagram kinyerése)?",
+    "options": [
+      { "text": "Az ER diagram kinyerhető egy jól elkészített osztálydiagramból", "isCorrect": true },
+      { "text": "Az EK diagram kinyerhető egy jól elkészített osztálydiagramból", "isCorrect": false },
+      { "text": "Az ER diagramon meg fog jelenni valamennyi <<entity>> sztereotípiájú osztály", "isCorrect": true },
+      { "text": "Az ER diagramon meg fog jelenni valamennyi <<er>> sztereotípiájú osztály", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Függőségi ciklus hogyan oldható fel?",
+    "options": [
+      { "text": "Legtöbbször a kód megduplázásával", "isCorrect": false },
+      { "text": "A ciklusban lévő csomagok közös csomagba helyezésével", "isCorrect": true },
+      { "text": "Csomagimporttal", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Csomagdiagramon mit jelent a {global} kibővítés?",
+    "options": [
+      { "text": "A csomag elemei mindenhol elérhetőek", "isCorrect": true },
+      { "text": "A csomag elemei titkosítottak", "isCorrect": false },
+      { "text": "A csomag elemei nemzetközi használatra készültek", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Csomagdiagramon mit jelent a {abstract} kibővítés?",
+    "options": [
+      { "text": "Még meg nem valósított csomagot", "isCorrect": true },
+      { "text": "Olyan csomagot, melynek nem lehetnek példányai", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mit jelent a tranzitivitás függőségek esetén?",
+    "options": [
+      { "text": "A függőségi láncok tiltását", "isCorrect": false },
+      { "text": "A függőség továbbterjedését", "isCorrect": true },
+      { "text": "Azt, hogy a függő osztályok átlátszóak", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mit értünk függőség alatt? Jelölje az igaz állításokat!",
+    "options": [
+      { "text": "Két tetszőleges elem között akkor létezik függőség, ha az egyik elem specifikációjában, megvalósításában történő változtatás változást okozhat a másik elem specifikációjában, megvalósításában.", "isCorrect": true },
+      { "text": "Az egyik elem megváltoztatása kihat a másik elemre.", "isCorrect": true },
+      { "text": "Az egyik elem törlésével a tartalmazott elem is törlésre kerül", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Csomagdiagramok igaz állítások:",
+    "options": [
+      { "text": "A függőségi kapcsolatok, és a csoportosítás osztályokra vonatkozik", "isCorrect": false },
+      { "text": "Az UML-ben a leginkább elterjedt rendezési elv a függőség", "isCorrect": true },
+      { "text": "A fő rajzelem a mappa", "isCorrect": true },
+      { "text": "A másodlagos rajzelem a use case", "isCorrect": false },
+      { "text": "A fő sztereotípia az <<import>>", "isCorrect": true },
+      { "text": "A fő sztereotípia az <<uses>>", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak az interakciós diagramokra?",
+    "options": [
+      { "text": "Az interakciós diagram üzenetváltásokat ábrázol.", "isCorrect": true },
+      { "text": "Az interakciós diagramon a kölcsönhatásban partner lehet egy osztály", "isCorrect": true },
+      { "text": "Az interakciós diagramon a kölcsönhatásban partner lehet egy use case", "isCorrect": true },
+      { "text": "Az interakciós diagramon a kölcsönhatásban partner lehet egy interfész", "isCorrect": true },
+      { "text": "Az interakciós diagramon a kölcsönhatásban partner lehet egy komponens", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Az alábbiak közül melyek tartoznak az interakciós diagramok közé?",
+    "options": [
+      { "text": "Állapotgép", "isCorrect": false },
+      { "text": "Idődiagram", "isCorrect": true },
+      { "text": "Állapot átmenet diagram", "isCorrect": false },
+      { "text": "Kommunikációs diagram", "isCorrect": true },
+      { "text": "Szekvencia diagram", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak az interakciós diagramok felhasználására?",
+    "options": [
+      { "text": "Használható követelmények leírására", "isCorrect": true },
+      { "text": "Használható tesztesetek leírására", "isCorrect": true },
+      { "text": "Elvárt viselkedés specifikálható vele", "isCorrect": true },
+      { "text": "Használható elvárt rendszer felhasználói felület definiálására", "isCorrect": false },
+      { "text": "Használható létező rendszer folyamatainak vizsgálatára", "isCorrect": true },
+      { "text": "Használható létező rendszer folyamatainak dokumentálására", "isCorrect": true },
+      { "text": "Használható létező rendszer folyamatainak vizualizálására", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Interakciós diagramok közül a szekvencia diagram mivel nyújt többet egy kommunikációs diagramnál?",
+    "options": [
+      { "text": "Az alapvető különbség az időzítési megkötések feltüntetésében van.", "isCorrect": true },
+      { "text": "Nincs különbség, azonos információtartalommal bíró ábrákról van szó.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (szekvencia diagram életvonal/aktivitás):",
+    "options": [
+      { "text": "Szekvencia diagram esetén az aktivitási sáv és az életvonal egyszerre kezdődhet.", "isCorrect": true },
+      { "text": "Szekvencia diagram esetén az aktivitási sáv kezdete minden esetben megelőzi az életvonal kezdetét, jelezve az inicializálást.", "isCorrect": false },
+      { "text": "Szekvencia diagram esetén az életvonal végével az aktivitási sávnak is végződnie kell.", "isCorrect": true },
+      { "text": "Szekvencia diagram esetén az életvonal vége az objektum megszűntét jelöli.", "isCorrect": true },
+      { "text": "Szekvencia diagram esetén az aktivitási sáv széles sávval van jelölve.", "isCorrect": true },
+      { "text": "Szekvencia diagram esetén az aktivitási sávban lehetnek szünetek, kimaradások.", "isCorrect": true },
+      { "text": "Szekvencia diagram esetén az életvonalban lehetnek szünetek, kimaradások", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (diagramok tartama):",
+    "options": [
+      { "text": "Egy szekvencia diagramon több életvonal lehet.", "isCorrect": true },
+      { "text": "Egy szekvencia diagramon csak egy aktivitási sáv lehet.", "isCorrect": false },
+      { "text": "Egy kommunikációs diagramon sok aktivitási sáv is lehet.", "isCorrect": false },
+      { "text": "Az idődiagramon feltüntethetőek az objektum állapotai", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (térbeli elhelyezkedés/idő):",
+    "options": [
+      { "text": "Szekvencia diagramon a kommunikációs partnerek térbeli elhelyezkedése nem számít", "isCorrect": true },
+      { "text": "Kommunikációs diagramon a kommunikációs partnerek térbeli elhelyezkedése számít", "isCorrect": true },
+      { "text": "Idődiagramon a kommunikációs partnerek térbeli elhelyezkedése nem számít", "isCorrect": true },
+      { "text": "Szekvencia diagramon az időt fentről lefelé kell értelmezni.", "isCorrect": true },
+      { "text": "Kommunikációs diagramon az időt balról jobbra kell értelmezni.", "isCorrect": false },
+      { "text": "Idődiagramon az időt balról jobbra kell értelmezni.", "isCorrect": true },
+      { "text": "Kommunikációs diagramon az időt nem értelmezzük.", "isCorrect": true },
+      { "text": "Szekvencia diagramon az idő nincs értelmezve.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia vs Kommunikációs diagram használata:",
+    "options": [
+      { "text": "Szekvencia diagramon minden partnerhez fog életvonal tartozni.", "isCorrect": true },
+      { "text": "Kommunikációs diagramon minden partnerhez fog életvonal tartozni.", "isCorrect": false },
+      { "text": "Szekvencia diagramok használata ott előnyösebb, ahol kevés partner között, de bonyolult minta szerint történik a kommunikáció.", "isCorrect": true },
+      { "text": "Kommunikációs diagramok használata ott előnyösebb, ahol kevés partner között, de bonyolult minta szerint történik a kommunikáció.", "isCorrect": false },
+      { "text": "Kommunikációs diagramok használata ott előnyösebb, ahol sok partner között, bonyolult minta szerint történik a nagyszámú üzenetváltás.", "isCorrect": false },
+      { "text": "Kommunikációs diagramok használata ott előnyösebb, ahol sok partner között, inkább egyszerű minta szerint történik a kommunikáció.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Hogyan kell értelmezni a kontextus interakciós ábrákat?",
+    "options": [
+      { "text": "Olyan idődiagram, melyen környezeti előírások szerepelnek", "isCorrect": false },
+      { "text": "Olyan szekvencia diagram, melyen nem funkcionális megkötések szerepelnek.", "isCorrect": true },
+      { "text": "Olyan kommunikációs diagram, melyen környezeti előírások szerepelnek.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a STRICT operátort?",
+    "options": [
+      { "text": "A halmazban lévő operandusok szigorú sorrendjét írja elő", "isCorrect": true },
+      { "text": "Szigorú minőségi követelményeket ír le.", "isCorrect": false },
+      { "text": "Csak akkor jöhet a következő, ha az előző teljes mértékben befejeződött", "isCorrect": true },
+      { "text": "Csak kezdési sorrendet szab meg, a befejezés a futásidő függvénye.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a REF operátort?",
+    "options": [
+      { "text": "Szigorú minőségi követelményeket ír le.", "isCorrect": false },
+      { "text": "Csak akkor jöhet a következő, ha az előző teljes mértékben befejeződött", "isCorrect": false },
+      { "text": "Hivatkozás másik diagramra", "isCorrect": true },
+      { "text": "Azt szabja meg, hogy a halmazban lévő műveleteknek le kell futnia, opcionálisan.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a BRK operátort?",
+    "options": [
+      { "text": "Szigorú minőségi követelményeket ír le.", "isCorrect": false },
+      { "text": "A megszakítás esetén bekövetkező működést írja le.", "isCorrect": true },
+      { "text": "Hivatkozás másik diagramra", "isCorrect": false },
+      { "text": "Tetszőlegesen felhasználható rövidítés...", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a ALT operátort?",
+    "options": [
+      { "text": "Egymást kizáró működéseket ir le.", "isCorrect": true },
+      { "text": "Csak akkor jöhet a következő, ha az előző teljes mértékben befejeződött...", "isCorrect": false },
+      { "text": "A párhuzamosítási alternatívákat jelöli", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a LOOP operátort?",
+    "options": [
+      { "text": "Egymást kizáró működéseket ir le.", "isCorrect": false },
+      { "text": "Csak akkor jöhet a következő, ha az előző teljes mértékben befejeződött...", "isCorrect": false },
+      { "text": "A párhuzamosítási alternatívákat jelöli", "isCorrect": false },
+      { "text": "Ismétlődés szemléltetéséhez használható", "isCorrect": true },
+      { "text": "STRICT és ALT használatát váltja ki.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a SEQ operátort?",
+    "options": [
+      { "text": "Egymást kizáró működéseket ír le.", "isCorrect": false },
+      { "text": "Hasonlít a STRICT-hez, de itt a sorrendiség csak indításkor fontos", "isCorrect": true },
+      { "text": "A párhuzamosítási alternatívákat jelöli", "isCorrect": false },
+      { "text": "Ismétlődés szemléltetéséhez használható", "isCorrect": false },
+      { "text": "STRICT szinonimája...", "isCorrect": false },
+      { "text": "Sorba kapcsolja az interakciókat", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a PAR operátort?",
+    "options": [
+      { "text": "Egymást kizáró működéseket ír le.", "isCorrect": false },
+      { "text": "Hasonlít a STRICT-hez, de itt a sorrendiség csak indításkor fontos", "isCorrect": false },
+      { "text": "A párhuzamosan indítandó elemeket jelöli", "isCorrect": true },
+      { "text": "Ismétlődés szemléltetéséhez használható", "isCorrect": false },
+      { "text": "STRICT szinonimája...", "isCorrect": false },
+      { "text": "Egyidejűséget jelöl", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Szekvencia diagram esetén hogyan kell értelmezni a REGION operátort?",
+    "options": [
+      { "text": "Egymást kizáró működéseket ír le.", "isCorrect": false },
+      { "text": "Hasonlít a STRICT-hez, de itt a sorrendiség csak indításkor fontos", "isCorrect": false },
+      { "text": "A párhuzamosan indítandó elemeket jelöli", "isCorrect": false },
+      { "text": "Ismétlődés szemléltetéséhez használható", "isCorrect": false },
+      { "text": "PAR esetén a kötelezően egyben végrehajtandó részt jelöli", "isCorrect": true },
+      { "text": "Egyidejűséget jelöl", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (állapot kijelzése szekvencia diagramon):",
+    "options": [
+      { "text": "Szekvencia diagramon feltüntethető az objektum aktuális állapota, téglalapba írva.", "isCorrect": true },
+      { "text": "Szekvencia diagramon feltüntethető az objektum aktuális állapota, lekerekített téglalapba írva.", "isCorrect": false },
+      { "text": "Szekvencia diagramon feltüntethető az objektum aktuális állapota, ellipszisbe írva.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (interakciós áttekintés):",
+    "options": [
+      { "text": "Az interakciós áttekintés olyan tevékenységdiagram, melyen szekvencia diagramokat hivatkozhatunk.", "isCorrect": true },
+      { "text": "Az interakciós áttekintés olyan osztálydiagram...", "isCorrect": false },
+      { "text": "Az interakciós áttekintés olyan szekvencia diagram, melyen kommunikációs diagramokat hivatkozhatunk.", "isCorrect": false },
+      { "text": "Az interakciós áttekintés olyan szekvencia diagram, melyen aktivitási diagramokat hivatkozhatunk.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (állapotgép/életciklus):",
+    "options": [
+      { "text": "Osztálydiagramon az osztály rajzelemben feltüntethetőek objektum életciklus hivatkozások.", "isCorrect": true },
+      { "text": "Osztálydiagramon az osztály rajzelemben feltüntethetőek use case hivatkozások.", "isCorrect": true },
+      { "text": "Az objektum életciklus diagram bemutatja, hogy milyen műveletek hatására melyik állapotból, melyik állapotba kerül egy példány.", "isCorrect": true },
+      { "text": "Az állapotgép tulajdonképpen nem más, mint egy use-case és metódus-megvalósítás összerendelés", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (összetett állapot jele):",
+    "options": [
+      { "text": "Állapotgépen az összetett állapot jele egy lekerekített téglalap, benne két kisebb jellel.", "isCorrect": true },
+      { "text": "Állapotgépen az összetett állapot jele lehet egy három részre osztott lekerekített téglalap.", "isCorrect": true },
+      { "text": "Állapotgépen az összetett állapot jele lehet egy két részre osztott lekerekített téglalap.", "isCorrect": true },
+      { "text": "Állapotgépen az összetett állapot jele lehet egy két részre osztott lekerekített téglalap - fent az állapot neve, lent tevékenységdiagram részlettel", "isCorrect": true },
+      { "text": "Állapotgépen az összetett állapot kibontható és több alállapotot tartalmaz, állapotátmenetekkel", "isCorrect": true },
+      { "text": "Állapotgépen az összetett állapot kibontható és több alállapotot tartalmaz, állapotátmenetek nélkül.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (esetválasztó csúcs):",
+    "options": [
+      { "text": "Jelölése téglalap, benne a választás, és a kimeneteken szögletes zárójelben a feltételek.", "isCorrect": false },
+      { "text": "Állapotgépen az esetválasztó csúcs csak egymást kizáró kimeneteket tartalmazhat.", "isCorrect": true },
+      { "text": "Jelölése rombusz, benne a választás, és a kimeneteken szögletes zárójelben a feltételek.", "isCorrect": true },
+      { "text": "Állapotgépen az esetválasztó csúcs nem csak egymást kizáró kimeneteket tartalmazhat, valamint párhozamos működés esetén jelezheti a párhuzamos szakasz kezdetét.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje, mely ábrázolási módok szabványosak UML2-ben, állapotautomatákra!",
+    "options": [
+      { "text": "Esemény / Tevékenység", "isCorrect": true },
+      { "text": "Esemény [Feltétel] / Tevékenység", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Állapotgépekkel kapcsolatban melyik állítás(ok) igaz? (történeti állapot)",
+    "options": [
+      { "text": "Egyszerű történeti állapot esetén a történeti állapot rákövetkező állapotába kerül a vezérlés, amennyiben a történeti állapot üres.", "isCorrect": true },
+      { "text": "Ha nem üres, akkor azt az állapotot veszi fel újra az automata, melyben akkor volt, amikor a közvetlen tartalmazó állapot elhagyásra került.", "isCorrect": true },
+      { "text": "Az állapotkonfiguráció is visszaállításra kerül.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mély történeti állapot esetén melyik állítás igaz?",
+    "options": [
+      { "text": "Ha nem üres, akkor azt az állapotot veszi fel újra az automata, melyben akkor volt, amikor a közvetlen tartalmazó állapot elhagyásra került, de nem csak az állapot, hanem az állapotkonfiguráció kerül visszaállításra.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (dialóguslefutás):",
+    "options": [
+      { "text": "A dialóguslefutás az állapotgép egyik fajtája, de állapotokként a képernyő állapotait kell feltüntetni.", "isCorrect": true },
+      { "text": "A dialóguslefutás az tevékenységdiagram egyik fajtája...", "isCorrect": false },
+      { "text": "A dialóguslefutás az objektumdiagram egyik fajtája...", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (konzisztencia):",
+    "options": [
+      { "text": "Egy UML-modell összefüggő (konzisztens), ha use case diagramjain nincs sem olyan use case, sem olyan aktor, mely nem vesz részt interakcióban.", "isCorrect": true },
+      { "text": "Egy UML-modell összefüggő (konzisztens), ha osztálydiagramján nincs elszigetelt osztály.", "isCorrect": true },
+      { "text": "Egy UML-modell összefüggő (konzisztens), ha létezik hozzá egy bizonyos lehetséges működőképes implementáció.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Egy inkonzisztens specifikáció azzal jár, hogy:",
+    "options": [
+      { "text": "nem lehet meghatározni a use casek közötti összefüggéseket.", "isCorrect": false },
+      { "text": "nem lehet belőle olyan szoftvert fejleszteni, ami működőképes lenne.", "isCorrect": true },
+      { "text": "lesznek olyan osztályok, melyek ugyan meg vannak valósítva, de használatban nincsenek.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mikor nevezünk egy UML tervezési modellt teljesnek?",
+    "options": [
+      { "text": "ha az általa leírt szoftver-rendszer állapotai és viselkedési módjai mindegyik lehetséges működési esetre és feltételre specifikálva lettek.", "isCorrect": true },
+      { "text": "ha abban minden - szakterület által megkívánt - aktor megtalálható.", "isCorrect": true },
+      { "text": "ha az általa leírt use casek és forgatókönyveik mindegyik lehetséges forgatókönyveik specifikálva lettek.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (teljesség/konzisztencia bizonyítása):",
+    "options": [
+      { "text": "Jelenleg úgy a teljesség, mint a konzisztencia megléte bizonyítható emulációs szoftverek segítségével.", "isCorrect": false },
+      { "text": "Jelenleg nincs megoldva még a teljesség bizonyításának vagy cáfolásának feladata.", "isCorrect": true },
+      { "text": "Jelenleg nem áll rendelkezésre olyan módszer, ill. a módszert megvalósító számítógépes eszköz, ami egy szoftver-terv UML-diagramjai közötti összhang bizonyítására, ill. cáfolására lenne alkalmas.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Jelölje az igaz állításokat (komponens diagram):",
+    "options": [
+      { "text": "A komponens diagram a komponensekből felépülő szoftver-rendszer struktúráját vázolja fel.", "isCorrect": true },
+      { "text": "A komponens adott modellelemek (osztályok, csomagok) fizikai egysége.", "isCorrect": true },
+      { "text": "A komponens diagram jól modellezi a szoftver-komponensek egymáshoz való viszonyát, kommunikációját.", "isCorrect": true },
+      { "text": "A komponens adott modellelemek (use case és forgatókönyv) fizikai egysége.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Komponens diagram szimbólumai és tartalma:",
+    "options": [
+      { "text": "UML szimbóluma egy téglalap, amelynek bal oldalát két kisebb téglalap metszi.", "isCorrect": true },
+      { "text": "Egy komponensben csak egy implementációs osztály valósulhat meg, vagy számos tervezési osztály.", "isCorrect": true },
+      { "text": "UML szimbóluma egy téglalap, amelynek jobb felső sarkát körbe írt paraméter jellemezheti..", "isCorrect": false },
+      { "text": "Egy komponensben számos implementációs osztály valósulhat meg.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Komponens diagramon használható sztereotípiák:",
+    "options": [
+      { "text": "<<executable>>", "isCorrect": true },
+      { "text": "<<trace>>", "isCorrect": true },
+      { "text": "<<implements>>", "isCorrect": true },
+      { "text": "<<snapshot>>", "isCorrect": false },
+      { "text": "<<file>>", "isCorrect": true },
+      { "text": "<<instanceOf>>", "isCorrect": true },
+      { "text": "<<library>>", "isCorrect": true },
+      { "text": "<<property>>", "isCorrect": false },
+      { "text": "<<document>>", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "A telepítési diagram (node) jellemzői:",
+    "options": [
+      { "text": "minden egyes csomópontja (node) valamilyen számítási feldolgozási egységet képvisel, egy szoftver vagy egy hardver elemet.", "isCorrect": true },
+      { "text": "A hardver lehet egy kisebb egység, de lehet egy teljes számítógép is.", "isCorrect": true },
+      { "text": "A telepítési és komponens diagramok nem kombinálhatóak közös ábrába.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Az UML-specifikáció részét képező OCL nyelv mire alkalmas?",
+    "options": [
+      { "text": "megszorítások definiálására alkalmas.", "isCorrect": true },
+      { "text": "pszeudo-kód és ábrarészletek definiálására alkalmas.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak a sztereotípiákra és CRC kártyákra?",
+    "options": [
+      { "text": "A <<boundary>> sztereotípia osztályokra alkalmazható.", "isCorrect": true },
+      { "text": "A <<boundary>> sztereotípia képernyőrészletekre alkalmazható.", "isCorrect": false },
+      { "text": "OO tervezésben egy CRC-kártya osztályokhoz felelősségeket határozhat meg.", "isCorrect": true },
+      { "text": "OO tervezésben egy CRC-kártya fejlesztőkhöz felelősségeket határozhat meg.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Függőség két osztály között akkor áll fenn, ha:",
+    "options": [
+      { "text": "van közöttük közös aktor.", "isCorrect": false },
+      { "text": "egyik specifikációjának megváltozása kihathat a másik osztály specifikációjára.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mely állítások igazak az absztrakt osztályra?",
+    "options": [
+      { "text": "Az absztrakt osztály csak limitált számú példánnyal rendelkezhet.", "isCorrect": false },
+      { "text": "Az absztrakt osztály nem példányosítható.", "isCorrect": true },
+      { "text": "Az absztrakt osztály nem példányosítható, de örököltethető belőle másik osztály.", "isCorrect": true },
+      { "text": "Az absztrakt osztály nem példányosítható és öröklésben is csak egy leszármazottja lehet.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Öröklődés típusai:",
+    "options": [
+      { "text": "Többszintű öröklődés esetén van olyan osztály, melynek őse és leszármazottja is van.", "isCorrect": true },
+      { "text": "Többszörös öröklődés esetén van olyan osztály, melynek őse és leszármazottja is van.", "isCorrect": true },
+      { "text": "Többszörös öröklődés esetén lehet olyan osztály, melynek több őse és több leszármazottja van.", "isCorrect": true },
+      { "text": "Többszörös öröklődés esetén lehet olyan osztály, melynek több őse és egy leszármazottja van.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Egy adott objektum dinamikus működésének leírására szolgál:",
+    "options": [
+      { "text": "osztálydiagram", "isCorrect": false },
+      { "text": "objektumdiagram", "isCorrect": false },
+      { "text": "állapot-átmenet diagram", "isCorrect": true },
+      { "text": "tevékenységdiagram", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Alapvetően melyik UML diagramon lehetséges üzenetek feltüntetése?",
+    "options": [
+      { "text": "Use case diagram", "isCorrect": false },
+      { "text": "Szekvencia diagram", "isCorrect": true },
+      { "text": "Állapotgép", "isCorrect": false },
+      { "text": "Osztálydiagram", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Alapvetően melyik diagramon lehet események bekövetkezését jelölni?",
+    "options": [
+      { "text": "Use case diagram", "isCorrect": false },
+      { "text": "Szekvencia diagram", "isCorrect": false },
+      { "text": "Állapot-átmenet diagram", "isCorrect": true },
+      { "text": "Osztálydiagram", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jelölje az osztálydiagramon osztályokra alkalmazható sztereotípiákat!",
+    "options": [
+      { "text": "<<implements>>", "isCorrect": true },
+      { "text": "<<uses>>", "isCorrect": true },
+      { "text": "<<entity>>", "isCorrect": true },
+      { "text": "<<boundary>>", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Refaktoringra vonatkozó igaz állítások:",
+    "options": [
+      { "text": "Refaktoring során elképzelhető, hogy új metódusok kerülnek egy osztályba.", "isCorrect": true },
+      { "text": "Refaktoring során a funkcionalitás nem változik meg.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mit jelent az emlékező állapot?",
+    "options": [
+      { "text": "Olyan állapot, amelyik emlékszik arra, hogy melyik állapotból származott a vezérjel...", "isCorrect": false },
+      { "text": "Olyan állapot, amelyik emlékszik arra, hogy melyik alállapotból terminált, és képes arra, hogy az állapotba való újabb belépéskor ugyanabba az állapotba kerüljön.", "isCorrect": true },
+      { "text": "Olyan állapot, amelyik emlékszik arra, hogy a vezérjel hányszor volt már jelen...", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mi a vezérlőautomata?",
+    "options": [
+      { "text": "A vezérlőautomata olyan telepítési diagram...", "isCorrect": false },
+      { "text": "A vezérlőautomata olyan osztálydiagram...", "isCorrect": false },
+      { "text": "A vezérlőautomata olyan állapotgép, mely műszaki eszközt, rendszert vezérel, vagy ír le", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Mi a dialóguslefutás?",
+    "options": [
+      { "text": "Olyan állapotautomata, mely a képernyő állapotait modellezi", "isCorrect": true }
+    ]
+  }
+]
+
