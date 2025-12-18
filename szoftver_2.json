@@ -125,7 +125,7 @@
     "options": [
       { "text": "Egy szekvencia diagramon több életvonal lehet.", "isCorrect": true },
       { "text": "Egy szekvencia diagramon csak egy aktivitási sáv lehet.", "isCorrect": false },
-      { "text": "Egy kommunikációs diagramon sok aktivitási sáv is lehet.", "isCorrect": false },
+      { "text": "Egy kommunikációs diagramon sok aktivitási sáv भी lehet.", "isCorrect": false },
       { "text": "Az idődiagramon feltüntethetőek az objektum állapotai", "isCorrect": true }
     ]
   },
