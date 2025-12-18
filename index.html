@@ -129,7 +129,7 @@
     let selectedQuestions = [];
     let currentIdx = 0;
     let score = 0;
-    let selectedOptionIdx = null;
+    let selectedOptionIndices = []; // Tömb a több kijelöléshez
 
     // Adatok betöltése
     fetch('szoftver_2.json')
@@ -144,7 +144,6 @@
         });
 
     function startQuiz() {
-        // Véletlenszerű 20 kérdés kiválasztása ismétlés nélkül
         selectedQuestions = allQuestions
             .sort(() => 0.5 - Math.random())
             .slice(0, 20);
@@ -154,7 +153,7 @@
 
     function showQuestion() {
         const q = selectedQuestions[currentIdx];
-        selectedOptionIdx = null;
+        selectedOptionIndices = [];
         
         document.getElementById('progress').innerText = `Kérdés: ${currentIdx + 1} / 20`;
         document.getElementById('question-text').innerText = q.question;
@@ -176,38 +175,59 @@
     }
 
     function selectOption(index, element) {
-        // Csak ha még nem ellenőriztük
         if (document.getElementById('check-btn').style.display !== 'none') {
-            selectedOptionIdx = index;
-            const allOptions = document.querySelectorAll('.option-container');
-            allOptions.forEach(el => el.classList.remove('selected'));
-            element.classList.add('selected');
+            const pos = selectedOptionIndices.indexOf(index);
+            if (pos > -1) {
+                // Ha már ki volt jelölve, vesszük le
+                selectedOptionIndices.splice(pos, 1);
+                element.classList.remove('selected');
+            } else {
+                // Ha nem volt, hozzáadjuk
+                selectedOptionIndices.push(index);
+                element.classList.add('selected');
+            }
         }
     }
 
     function checkAnswer() {
-        if (selectedOptionIdx === null) {
-            alert("Kérlek, válassz egy választ!");
+        if (selectedOptionIndices.length === 0) {
+            alert("Kérlek, válassz legalább egy választ!");
             return;
         }
 
         const q = selectedQuestions[currentIdx];
         const allOptionsNodes = document.querySelectorAll('.option-container');
         
-        let isCorrect = q.options[selectedOptionIdx].isCorrect;
+        let correctCount = 0;
+        let incorrectCount = 0;
+        let totalCorrectInQuestion = q.options.filter(o => o.isCorrect).length;
 
-        // Színezés
+        // Színezés és számolás
         q.options.forEach((opt, index) => {
+            const isSelected = selectedOptionIndices.includes(index);
+            
             if (opt.isCorrect) {
                 allOptionsNodes[index].classList.remove('selected');
                 allOptionsNodes[index].classList.add('correct');
-            } else if (index === selectedOptionIdx && !opt.isCorrect) {
-                allOptionsNodes[index].classList.remove('selected');
-                allOptionsNodes[index].classList.add('wrong');
+                if (isSelected) correctCount++;
+            } else {
+                if (isSelected) {
+                    allOptionsNodes[index].classList.remove('selected');
+                    allOptionsNodes[index].classList.add('wrong');
+                    incorrectCount++;
+                }
             }
         });
 
-        if (isCorrect) score++;
+        // Pontozási logika:
+        // Ha minden jó és nincs rossz: 1 pont
+        // Ha részben jó (van jó, de hiányzik vagy van rossz is): 0.5 pont
+        // Ha csak rossz: 0 pont
+        if (correctCount === totalCorrectInQuestion && incorrectCount === 0) {
+            score += 1;
+        } else if (correctCount > 0) {
+            score += 0.5;
+        }
 
         document.getElementById('check-btn').style.display = 'none';
 
@@ -229,7 +249,7 @@
         
         const percent = Math.round((score / 20) * 100);
         document.getElementById('score-text').innerHTML = `
-            Helyes válaszok: <b>${score}</b> / 20<br>
+            Elért pontszám: <b>${score}</b> / 20<br>
             Százalék: <b>${percent}%</b>
         `;
     }
