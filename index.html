@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szoftvertechnológia 2 Kvíz</title>
+    <style>
+        /* Alapbeállítások és színek */
+        :root {
+            --bg-sand: #f4ecd8;
+            --btn-green: #4CAF50;
+            --selected-yellow: #fff176;
+            --correct-green: #81c784;
+            --wrong-red: #e57373;
+            --border-color: #bcad93;
+        }
+
+        body {
+            background-color: var(--bg-sand);
+            font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        #quiz-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Válaszlehetőségek stílusa */
+        .option-container {
+            border: 2px solid var(--border-color);
+            margin-bottom: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            font-weight: normal;
+        }
+
+        .option-container:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .selected {
+            background-color: var(--selected-yellow) !important;
+        }
+
+        .correct {
+            background-color: var(--correct-green) !important;
+        }
+
+        .wrong {
+            background-color: var(--wrong-red) !important;
+        }
+
+        /* Gombok stílusa */
+        button {
+            background-color: var(--btn-green);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: inherit;
+            margin-top: 20px;
+            margin-right: 10px;
+            display: none; /* Alapértelmezettként rejtve, amíg kell */
+        }
+
+        button:hover {
+            filter: brightness(0.9);
+        }
+
+        #result-screen {
+            text-align: center;
+            display: none;
+        }
+
+        .progress {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Mobil optimalizálás */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .option-container { padding: 12px; }
+            button { width: 100%; margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <div id="quiz-ui">
+        <div class="progress" id="progress">Kérdés: 1 / 20</div>
+        <h2 id="question-text">Kérdés betöltése...</h2>
+        <div id="options-list"></div>
+        
+        <button id="check-btn" onclick="checkAnswer()">Ellenőrzés</button>
+        <button id="next-btn" onclick="nextQuestion()">Következő</button>
+        <button id="evaluate-btn" onclick="showResults()">Teszt kiértékelése</button>
+    </div>
+
+    <div id="result-screen">
+        <h2>Teszt eredménye</h2>
+        <p id="score-text"></p>
+        <button style="display:inline-block;" onclick="location.reload()">Újra</button>
+    </div>
+</div>
+
+<script>
+    let allQuestions = [];
+    let selectedQuestions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let selectedOptionIdx = null;
+
+    // Adatok betöltése
+    fetch('szoftver_2.json')
+        .then(response => response.json())
+        .then(data => {
+            allQuestions = data;
+            startQuiz();
+        })
+        .catch(err => {
+            document.getElementById('question-text').innerText = "Hiba a JSON betöltésekor!";
+            console.error(err);
+        });
+
+    function startQuiz() {
+        // Véletlenszerű 20 kérdés kiválasztása ismétlés nélkül
+        selectedQuestions = allQuestions
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 20);
+        
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const q = selectedQuestions[currentIdx];
+        selectedOptionIdx = null;
+        
+        document.getElementById('progress').innerText = `Kérdés: ${currentIdx + 1} / 20`;
+        document.getElementById('question-text').innerText = q.question;
+        
+        const list = document.getElementById('options-list');
+        list.innerHTML = '';
+        
+        q.options.forEach((opt, index) => {
+            const div = document.createElement('div');
+            div.className = 'option-container';
+            div.innerText = opt.text;
+            div.onclick = () => selectOption(index, div);
+            list.appendChild(div);
+        });
+
+        document.getElementById('check-btn').style.display = 'inline-block';
+        document.getElementById('next-btn').style.display = 'none';
+        document.getElementById('evaluate-btn').style.display = 'none';
+    }
+
+    function selectOption(index, element) {
+        // Csak ha még nem ellenőriztük
+        if (document.getElementById('check-btn').style.display !== 'none') {
+            selectedOptionIdx = index;
+            const allOptions = document.querySelectorAll('.option-container');
+            allOptions.forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    }
+
+    function checkAnswer() {
+        if (selectedOptionIdx === null) {
+            alert("Kérlek, válassz egy választ!");
+            return;
+        }
+
+        const q = selectedQuestions[currentIdx];
+        const allOptionsNodes = document.querySelectorAll('.option-container');
+        
+        let isCorrect = q.options[selectedOptionIdx].isCorrect;
+
+        // Színezés
+        q.options.forEach((opt, index) => {
+            if (opt.isCorrect) {
+                allOptionsNodes[index].classList.remove('selected');
+                allOptionsNodes[index].classList.add('correct');
+            } else if (index === selectedOptionIdx && !opt.isCorrect) {
+                allOptionsNodes[index].classList.remove('selected');
+                allOptionsNodes[index].classList.add('wrong');
+            }
+        });
+
+        if (isCorrect) score++;
+
+        document.getElementById('check-btn').style.display = 'none';
+
+        if (currentIdx < 19) {
+            document.getElementById('next-btn').style.display = 'inline-block';
+        } else {
+            document.getElementById('evaluate-btn').style.display = 'inline-block';
+        }
+    }
+
+    function nextQuestion() {
+        currentIdx++;
+        showQuestion();
+    }
+
+    function showResults() {
+        document.getElementById('quiz-ui').style.display = 'none';
+        document.getElementById('result-screen').style.display = 'block';
+        
+        const percent = Math.round((score / 20) * 100);
+        document.getElementById('score-text').innerHTML = `
+            Helyes válaszok: <b>${score}</b> / 20<br>
+            Százalék: <b>${percent}%</b>
+        `;
+    }
+</script>
+
+</body>
+</html>
