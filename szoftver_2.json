@@ -38,12 +38,6 @@
     ]
   },
   {
-    "question": "Mely állítások igazak (ER diagram kinyerése)?",
-    "options": [
-      { "text": "Az EK diagram kinyerhető egy jól elkészített osztálydiagramból", "isCorrect": true }
-    ]
-  },
-  {
     "question": "A függőség tranzitív?",
     "options": [
       { "text": "Igen", "isCorrect": false },
@@ -152,12 +146,6 @@
     "options": [
       { "text": "Szekvencia diagramon minden partnerhez fog életvonal tartozni.", "isCorrect": true },
       { "text": "Kommunikációs diagramon minden partnerhez fog életvonal tartozni.", "isCorrect": false }
-    ]
-  },
-  {
-    "question": "Mely állítás igaz az interakció operátorokra?",
-    "options": [
-      { "text": "STRICT és ALT használatát váltja ki.", "isCorrect": true }
     ]
   },
   {
